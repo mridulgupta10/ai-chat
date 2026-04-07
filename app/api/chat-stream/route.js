@@ -41,7 +41,7 @@ export async function POST(req) {
       console.error("Groq API Error:", error.response?.data || error);
       return Response.json(
         { error: "Failed to process request" },
-        { status: 500 }
+        { status: 400 }
       );
   }
 }
